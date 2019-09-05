@@ -1,0 +1,43 @@
+{
+  "name": "paxg",
+  "version": "0.0.1",
+  "description": "Paxos-issued Gold-collateralized ERC20 asset",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "abi": "mkdir -p abi-out && solcjs --abi ./contracts/zeppelin/SafeMath.sol ./contracts/PAXGImplementation.sol -o ./abi-out && cp ./abi-out/__contracts_PAXGImplementation_sol_PAXGImplementation.abi ./PAXG.abi",
+    "compile": "truffle compile",
+    "coverage": "solidity-coverage",
+    "flatten-impl": "truffle-flattener ./contracts/PAXGImplementation.sol > ./flattened/PAXGImplementation.sol",
+    "flatten-proxy": "truffle-flattener ./contracts/zeppelin/AdminUpgradeabilityProxy.sol > ./flattened/AdminUpgradeabilityProxy.sol",
+    "ganache": "ganache-cli",
+    "migrate": "truffle migrate",
+    "solium": "solium -d contracts/ --fix",
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paxosglobal/paxos-gold-contracts.git"
+  },
+  "author": "PAXGOS",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/paxosglobal/paxos-gold-contracts/issues"
+  },
+  "homepage": "https://github.com/paxosglobal/paxos-gold-contracts#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eth-sig-util": "^2.1.0",
+    "ganache-cli": "^6.1.2",
+    "openzeppelin-test-helpers": "^0.1.1",
+    "solc": "0.4.24",
+    "solidity-coverage": "^0.5.4",
+    "solium": "^1.1.8",
+    "truffle": "^5.0.0",
+    "truffle-flattener": "^1.2.6",
+    "truffle-hdwallet-provider": "0.0.5",
+    "zos-lib": "^2.1.0"
+  }
+}
