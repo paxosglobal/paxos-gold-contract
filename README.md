@@ -58,10 +58,10 @@ transaction mined onto the blockchain more quickly.
 
 ### Controlling the token supply
 
-The total supply of PAXG is backed by fiat held in reserve at Paxos.
+The total supply of PAXG is backed by gold held in professional vaults in London, under the custody of Paxos.
 There is a single `supplyController` address that can mint and burn the token
-based on the actual movement of cash in and out of the reserve based on
-requests for the purchase and redemption of PAXG.
+based on the actual movement of gold in and out of the reserve based on
+requests for the purchase, conversion and redemption of PAXG.
 
 The supply control interface includes methods to get the current address
 of the supply controller, and events to monitor the change in supply of PAXG.
