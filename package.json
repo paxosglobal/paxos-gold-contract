@@ -37,7 +37,7 @@
     "solium": "^1.1.8",
     "truffle": "^5.0.0",
     "truffle-flattener": "^1.2.6",
-    "truffle-hdwallet-provider": "0.0.5",
+    "@truffle/hdwallet-provider": "^1.0.28",
     "zos-lib": "^2.1.0"
   }
 }
