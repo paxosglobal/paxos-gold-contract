@@ -89,6 +89,44 @@ Paxos charges a set fee rate for all on-chain transfers of PAXG in order to offs
 The fee controller has the ability to set the fee recipient and the fee rate (measured in 1/100th of a basis point).
 Paxos will never change the fee rate without prior notice as we take transparency very seriously.
 
+#### Fee Rounding
+The `transfer` function takes the debit amount as input, and computes the fee and credit to the recipient as
+```
+fee = debit.mul(feeRate).div(feeParts)
+credit = debit.sub(fee)
+```
+Note that div truncates to an integer (and therefore 18 decimal effective precision).
+
+#### Inverse Fee Rounding
+The "inverse fee problem" is the problem of figuring out the amount to send (the debit), and the corresponding fee, 
+given that you know how much you want the recipient to receive (the credit). 
+
+The following is a solution for the fee given the credit
+```
+denominator = feeParts.sub(feeRate)
+fee = credit.mul(feeRate).div(denominator)
+debit = credit.add(fee)
+```
+One can prove this is always a solution by expressing the truncate rounding as a set of inequalities.
+Note that there is a necessary truncate operation in the `div` step. The key here is that the rounding
+is done in the computation of the expected fee rather than trying to compute the debit directly 
+from the credit. There are other orders of operations that lead to inconsistent rounding such that
+the transfer function will compute a different fee and credit than you intended.
+
+#### Saving On Inverse Fees
+It is sometimes the case that `smallerFee = fee.sub(1)` is also a solution. It is likely only worth the extra compute 
+to save 10^-18 PAXG if doing the math off-chain. One checks that 
+```
+smallerFee = fee.sub(1)
+debit = credit.add(smallerFee)
+debitFee = debit.mul(feeRate).div(feeParts)
+if debitFee == smallerFee { // this is a solution!
+    return smallerFee
+} else {
+    return fee
+}
+```
+
 ### Asset Protection Role
 
 As required by our regulators, we have introduced a role for asset protection to freeze or seize the assets of a criminal party when required to do so by law, including by court order or other legal process.
