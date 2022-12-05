@@ -2,7 +2,7 @@ var HDWalletProvider = require("@truffle/hdwallet-provider");
 const mnemonic = "";
 const walletChildNum = 0;
 const networkAddress = "https://mainnet.infura.io/v3/<your-api-key>";
-const ropstenNetworkAddress = "https://ropsten.infura.io/v3/<your-api-key>";
+const goerliNetworkAddress = "https://goerli.infura.io/v3/<your-api-key>";
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
@@ -22,12 +22,11 @@ module.exports = {
       gas: 10000000000000,
       gasPrice: 0x01
     },
-    ropsten: {
-      network_id: 3,
+    goerli: {
+      network_id: 5,
       provider: function() {
-        return new HDWalletProvider(mnemonic, ropstenNetworkAddress, walletChildNum)
+        return new HDWalletProvider(mnemonic, goerliNetworkAddress, walletChildNum)
       },
-      // ropsten block limit
       gas: 4700000,
       gasPrice: 0x01
     },
