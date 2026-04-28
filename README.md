@@ -1,7 +1,7 @@
 # Paxos Gold (PAXG)
 Paxos-issued gold collateralized ERC20 stablecoin public smart contract repository.
 
-> **PAXG V2**: The PAXG V2 contracts are maintained in [paxos-token-contracts](https://github.com/paxosglobal/paxos-token-contracts) (included here as a submodule), which is the shared Paxos token contract repository also used by USDP, USDG, and PYUSD. This repository contains the V1 contracts and historical audit reports and will be archived following the V2 upgrade.
+> **PAXG V2**: The PAXG V2 contracts are maintained in [paxos-token-contracts](https://github.com/paxosglobal/paxos-token-contracts) (included here as a submodule), which is the shared Paxos token contract repository also used by USDP, USDG, and PYUSD. This repository contains the V1 contracts and historical audit reports.
 
 https://www.paxos.com/pax-gold-whitepaper
 
