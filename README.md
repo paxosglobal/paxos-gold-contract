@@ -1,14 +1,27 @@
 # Paxos Gold (PAXG)
-Paxos-issued phyiscal gold ERC20 token public smart contract repository.
+Paxos-issued gold collateralized ERC20 stablecoin public smart contract repository.
+
+> **PAXG V2**: The PAXG V2 contracts are maintained in [paxos-token-contracts](https://github.com/paxosglobal/paxos-token-contracts) (included here as a submodule), which is the shared Paxos token contract repository also used by USDP, USDG, and PYUSD. This repository contains the V1 contracts and historical audit reports.
 
 https://www.paxos.com/pax-gold-whitepaper
+
+## Audits
+
+| Audit | Report |
+| ----- | ------ |
+| ChainSecurity — PAXG V1 | [audit-reports/paxg-audits/ChainSecurity_PAXOS-GOLD.pdf](audit-reports/paxg-audits/ChainSecurity_PAXOS-GOLD.pdf) |
+| CertiK — PAXG V1 formal verification | [audit-reports/paxg-audits/CertiK_Verification_Report_for_Paxos.pdf](audit-reports/paxg-audits/CertiK_Verification_Report_for_Paxos.pdf) |
+| Zellic — PAXG V2 | [paxos-token-contracts/audits/PAXG V2 - Zellic Audit Report.pdf](paxos-token-contracts/audits/PAXG%20V2%20-%20Zellic%20Audit%20Report.pdf) |
+| ChainSecurity — Paxos Standard | [audit-reports/pax-audits/ChainSecurity_Audit_Report.pdf](audit-reports/pax-audits/ChainSecurity_Audit_Report.pdf) |
+| Nomic Labs — Paxos Standard | [audit-reports/pax-audits/Nomic_Labs_Audit_Report.pdf](audit-reports/pax-audits/Nomic_Labs_Audit_Report.pdf) |
+| Trail of Bits — Paxos Standard | [audit-reports/pax-audits/Trail_of_Bits_Audit_Report.pdf](audit-reports/pax-audits/Trail_of_Bits_Audit_Report.pdf) |
 
 ## ABI, Address, and Verification
 
 The contract abi is in `PAXG.abi`. It is the abi of the implementation contract.
 Interaction with PAXG is done at the address of the proxy at `0x45804880De22913dAFE09f4980848ECE6EcbAf78`. See
 https://etherscan.io/token/0x45804880De22913dAFE09f4980848ECE6EcbAf78 for live on-chain details, and the section on bytecode verification below.
-See also our independent security audits by [ChainSecurity](audit-reports/paxg-audits/ChainSecurity_PAXOS-GOLD.pdf) and a formal verification audit by [CertiK](audit-reports/paxg-audits/CertiK_Verification_Report_for_Paxos.pdf). Since Pax Gold is based on Paxos Standard, also see other independent security audits of Paxos Standard by [Nomic Labs](https://medium.com/nomic-labs-blog/paxos-standard-pax-audit-report-ca743c9575dc), [ChainSecurity](https://medium.com/chainsecurity/paxos-standard-audit-completed-2e9a0064e8bb),
+See the Audits section above for V1 and V2 audit reports. Since Pax Gold is based on Paxos Standard, also see other independent security audits of Paxos Standard by [Nomic Labs](https://medium.com/nomic-labs-blog/paxos-standard-pax-audit-report-ca743c9575dc), [ChainSecurity](https://medium.com/chainsecurity/paxos-standard-audit-completed-2e9a0064e8bb),
 and [Trail of Bits](https://github.com/trailofbits/publications/blob/master/reviews/paxos.pdf).
 
 ## Contract Specification

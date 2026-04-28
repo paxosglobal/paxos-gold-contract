@@ -1,9 +1,14 @@
 node_modules/
 build/
 abi-out/
+artifacts/
+cache/
+typechain-types/
 coverage/
 coverage.json
 coverageEnv/
 scTopics
 allFiredEvents
 .idea/
+.env
+yarn.lock
