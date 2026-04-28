@@ -12,6 +12,9 @@ https://www.paxos.com/pax-gold-whitepaper
 | ChainSecurity — PAXG V1 | [audit-reports/paxg-audits/ChainSecurity_PAXOS-GOLD.pdf](audit-reports/paxg-audits/ChainSecurity_PAXOS-GOLD.pdf) |
 | CertiK — PAXG V1 formal verification | [audit-reports/paxg-audits/CertiK_Verification_Report_for_Paxos.pdf](audit-reports/paxg-audits/CertiK_Verification_Report_for_Paxos.pdf) |
 | Zellic — PAXG V2 | [paxos-token-contracts/audits/PAXG V2 - Zellic Audit Report.pdf](paxos-token-contracts/audits/PAXG%20V2%20-%20Zellic%20Audit%20Report.pdf) |
+| ChainSecurity — Paxos Standard | [audit-reports/pax-audits/ChainSecurity_Audit_Report.pdf](audit-reports/pax-audits/ChainSecurity_Audit_Report.pdf) |
+| Nomic Labs — Paxos Standard | [audit-reports/pax-audits/Nomic_Labs_Audit_Report.pdf](audit-reports/pax-audits/Nomic_Labs_Audit_Report.pdf) |
+| Trail of Bits — Paxos Standard | [audit-reports/pax-audits/Trail_of_Bits_Audit_Report.pdf](audit-reports/pax-audits/Trail_of_Bits_Audit_Report.pdf) |
 
 ## ABI, Address, and Verification
 
