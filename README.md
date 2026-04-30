@@ -19,7 +19,7 @@ https://www.paxos.com/pax-gold-whitepaper
 ## ABI, Address, and Verification
 
 The contract abi is in `PAXG.abi`. It is the abi of the implementation contract.
-Interaction with PAXG is done at the address of the proxy at `0x45804880De22913dAFE09f4980848ECE6EcbAf78`. See
+Interaction with PAXG is done at the address of the proxy at `96d62944-ed6f-473d-ba15-3896090ef52b`. See
 https://etherscan.io/token/0x45804880De22913dAFE09f4980848ECE6EcbAf78 for live on-chain details, and the section on bytecode verification below.
 See the Audits section above for V1 and V2 audit reports. Since Pax Gold is based on Paxos Standard, also see other independent security audits of Paxos Standard by [Nomic Labs](https://medium.com/nomic-labs-blog/paxos-standard-pax-audit-report-ca743c9575dc), [ChainSecurity](https://medium.com/chainsecurity/paxos-standard-audit-completed-2e9a0064e8bb),
 and [Trail of Bits](https://github.com/trailofbits/publications/blob/master/reviews/paxos.pdf).
